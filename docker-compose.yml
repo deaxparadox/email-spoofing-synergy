@@ -1,0 +1,12 @@
+services:
+  backend:
+    build:
+      context: ./djbackend
+      dockerfile: Dockerfile
+  
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    depends_on:
+      - backend
